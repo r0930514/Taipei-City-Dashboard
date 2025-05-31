@@ -69,13 +69,37 @@ export function getComponentDataTimeframe(time_from, time_to, api) {
 		.split(".")[0]
 		.replace("T", " ");
 
-	if (time_to === "now") {
+	if (time_to === "now" || !time_to || time_to === "") {
 		// let parsedTimeTo be the current time formated YYYY-MM-DD HH:MM:SS and in UTC+8
 		parsedTimeTo = new Date(nowTimeTo - tzoffset)
 			.toISOString()
 			.split(".")[0]
 			.replace("T", " ");
+	} else {
+		// 如果 time_to 是具體的時間值，嘗試解析它
+		try {
+			const toTime = new Date(time_to);
+			if (!isNaN(toTime.getTime())) {
+				parsedTimeTo = new Date(toTime - tzoffset)
+					.toISOString()
+					.split(".")[0]
+					.replace("T", " ");
+			} else {
+				// 如果解析失敗，使用當前時間
+				parsedTimeTo = new Date(nowTimeTo - tzoffset)
+					.toISOString()
+					.split(".")[0]
+					.replace("T", " ");
+			}
+		} catch {
+			// 如果發生錯誤，使用當前時間
+			parsedTimeTo = new Date(nowTimeTo - tzoffset)
+				.toISOString()
+				.split(".")[0]
+				.replace("T", " ");
+		}
 	}
+
 	if (api === true) {
 		return {
 			timefrom: parsedTimeFrom.replace(" ", "T") + "+08:00",

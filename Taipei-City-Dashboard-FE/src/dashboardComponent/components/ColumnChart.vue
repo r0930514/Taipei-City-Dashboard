@@ -22,13 +22,13 @@ const emits = defineEmits([
 ]);
 
 const isLargeDataSet = computed(() => {
-	return props.series[0].data.length > 12
+	return props.series && props.series[0] && props.series[0].data && props.series[0].data.length > 12
 })
 
 // Calculate initial width for large datasets only
 const initialWidth = computed(() => {
 	const WIDTH_PER_ITEM = 32
-	const itemCount = props.series[0].data.length;
+	const itemCount = props.series && props.series[0] && props.series[0].data ? props.series[0].data.length : 0;
 	return itemCount * WIDTH_PER_ITEM;
 });
 
@@ -217,6 +217,7 @@ function resetWidth() {
       </p>
     </div>
     <VueApexCharts
+      v-if="series && series.length > 0 && series[0] && series[0].data"
       :key="chartWidth"
       type="bar"
       :width="chartWidth"
@@ -225,6 +226,12 @@ function resetWidth() {
       :series="series"
       @data-point-selection="handleDataSelection"
     />
+    <div
+      v-else
+      class="columnChart-nodata"
+    >
+      <p>暫無數據</p>
+    </div>
   </div>
 </template>
 
@@ -267,6 +274,15 @@ function resetWidth() {
 				color: var(--color-highlight)
 			}
 		}
+	}
+
+	&-nodata {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 250px;
+		color: var(--color-complement-text);
+		font-size: var(--font-s);
 	}
 }
 </style>

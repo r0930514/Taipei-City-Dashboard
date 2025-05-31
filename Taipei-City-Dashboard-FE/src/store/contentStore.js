@@ -284,9 +284,15 @@ export const useContentStore = defineStore("content", {
 					} catch (error) {
 						console.error(`Failed to fetch chart data for component ${component.id}:`, error);
 						// Set empty chart data to avoid errors in subsequent operations
-						this.cityDashboard.components[index].chart_data = [];
+						this.cityDashboard.components[index].chart_data = [{
+							data: [],
+							name: "無資料"
+						}];
 						
-						this.loading = false;
+						// 確保 chart_config.categories 也有預設值
+						if (!this.cityDashboard.components[index].chart_config.categories) {
+							this.cityDashboard.components[index].chart_config.categories = [];
+						}
 					}
 					
 				}
