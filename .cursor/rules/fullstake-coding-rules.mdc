@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Concise:
+
+The frontend uses Vue 3, with Apexcharts for data visualization (charts) and Mapbox for maps. The backend is powered by Go.
+Slightly more descriptive:
+
+For the frontend, we're leveraging Vue 3. Data visualization is handled by Apexcharts for charts and Mapbox for interactive maps. The backend is built with Go.
+More formal/technical:
+
+The frontend implementation utilizes Vue 3. Apexcharts is employed for charting and data visualization, while Mapbox is used for geographical mapping. The backend is developed using the Go language.
+
+The components are the dashboard's visual elements. They include statistical data (charts), spatial data (maps), and some historical data.
+
+For data formatting, please refer to the following frontend technical documentation:
+
+"Chart Data" (for chart data styles): https://tuic.gov.taipei/documentation/front-end/chart-data
+"Map Data" (for spatial data styles): https://tuic.gov.taipei/documentation/front-end/map-data
+And for the backend:
+
+"Component Data APIs" (for component data APIs): https://tuic.gov.taipei/documentation/back-end/component-data-apis
