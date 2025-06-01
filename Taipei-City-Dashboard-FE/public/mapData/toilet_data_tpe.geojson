@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "toilet_data_tpe",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "district": "中正區", "name": "臺北車站(署)" }, "geometry": { "type": "Point", "coordinates": [ 121.516989, 25.047893 ] } },
+{ "type": "Feature", "properties": { "district": "南港區", "name": "台灣高鐵南港站" }, "geometry": { "type": "Point", "coordinates": [ 121.607064, 25.053189 ] } },
+{ "type": "Feature", "properties": { "district": "信義區", "name": "信義國小地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.563301, 25.032002 ] } },
+{ "type": "Feature", "properties": { "district": "內湖區", "name": "西湖公園地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.570252, 25.08292 ] } },
+{ "type": "Feature", "properties": { "district": "內湖區", "name": "西康地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.563698, 25.084768 ] } },
+{ "type": "Feature", "properties": { "district": "萬華區", "name": "新糖廍公園地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.494246, 25.033596 ] } },
+{ "type": "Feature", "properties": { "district": "中山區", "name": "進安公園地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.537702, 25.046182 ] } },
+{ "type": "Feature", "properties": { "district": "松山區", "name": "偶戲博物館地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.561325, 25.04779 ] } },
+{ "type": "Feature", "properties": { "district": "松山區", "name": "西松高中地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.566071, 25.055976 ] } },
+{ "type": "Feature", "properties": { "district": "信義區", "name": "松山車站(署)" }, "geometry": { "type": "Point", "coordinates": [ 121.577914, 25.049437 ] } },
+{ "type": "Feature", "properties": { "district": "萬華區", "name": "萬華車站(署)" }, "geometry": { "type": "Point", "coordinates": [ 121.501321, 25.033445 ] } },
+{ "type": "Feature", "properties": { "district": "南港區", "name": "南港車站(署)" }, "geometry": { "type": "Point", "coordinates": [ 121.607334, 25.053575 ] } },
+{ "type": "Feature", "properties": { "district": "松山區", "name": "松山機場" }, "geometry": { "type": "Point", "coordinates": [ 121.551513, 25.063666 ] } },
+{ "type": "Feature", "properties": { "district": "萬華區", "name": "洛陽停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.505376, 25.047595 ] } },
+{ "type": "Feature", "properties": { "district": "中正區", "name": "中山堂地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.509728, 25.043034 ] } },
+{ "type": "Feature", "properties": { "district": "萬華區", "name": "峨眉停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.505325, 25.044327 ] } },
+{ "type": "Feature", "properties": { "district": "萬華區", "name": "莒光立體停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.503462, 25.031184 ] } },
+{ "type": "Feature", "properties": { "district": "士林區", "name": "蘭雅公園地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.529402, 25.109725 ] } },
+{ "type": "Feature", "properties": { "district": "南港區", "name": "世貿公園地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.616327, 25.057615 ] } },
+{ "type": "Feature", "properties": { "district": "南港區", "name": "南港國小地下停車場" }, "geometry": { "type": "Point", "coordinates": [ 121.611213, 25.056415 ] } }
+]
+}
